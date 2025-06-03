@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>coord2state example</title>
+  <script src="../dist/coord2state.min.js"></script>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; }
+    input { width: 6em; margin-right: 0.5em; }
+  </style>
+</head>
+<body>
+  <h1>coord2state example</h1>
+  <p>Enter latitude and longitude, then click “Lookup” to see which state the point is in.</p>
+  <div>
+    <label>Lat: <input id="lat" type="number" value="39.71" step="0.01"></label>
+    <label>Lon: <input id="lon" type="number" value="-104.05" step="0.01"></label>
+    <button id="btn">Lookup</button>
+  </div>
+  <p id="out"></p>
+
+  <script>
+    document.getElementById("btn").onclick = () => {
+      const lat = parseFloat(document.getElementById("lat").value);
+      const lon = parseFloat(document.getElementById("lon").value);
+      const state = getState(lat, lon);
+      document.getElementById("out").textContent =
+        state ? `State code: ${state}` : "No state found.";
+    };
+  </script>
+</body>
+</html>
