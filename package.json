@@ -1,0 +1,18 @@
+{
+  "name": "coord2state",
+  "version": "1.0.0",
+  "description": "A fast JS library for mapping lat/lon to US states without API calls",
+  "main": "dist/coord2state.min.js",
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": ["coordinates", "state", "latlong", "geolocation", "browser", "javascript"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AZHenley/coord2state"
+  },
+  "author": "Austin Henley",
+  "license": "MIT"
+}
