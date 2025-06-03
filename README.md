@@ -4,14 +4,14 @@ coord2state is a single-file JS library with no dependencies for quickly looking
 
 To use the library, ...
 
-To generate the JS library, install `geopandas` and run `build_state_lookup.py`:
+To generate the JS library, install `geopandas` and run `scripts/build_state_lookup.py`:
 
 ```
-python3 build_state_lookup.py \
+python3 scripts/build_state_lookup.py \
   --shapefile tl_2024_us_state.shp \
-  --template state-lookup.template.js \
+  --template src/coord2state.template.js \
   --tolerance 0.01 \           
-  --out state-lookup.js
+  --out dist/coord2state.js
 ```
 You can then minify it using:
 
@@ -19,21 +19,21 @@ You can then minify it using:
 terser state-lookup.js \
   --compress \
   --mangle \
-  --output state-lookup.min.js \
+  --output coord2state.min.js \
   --comments false
 ```
 
-The Jupyter notebook for evaluating the borders is `benchmark_borders.ipynb`
+The Jupyter notebook for evaluating the borders is `scripts/benchmark_borders.ipynb`
 
 <img width="1392" alt="bordersnotebook" src="https://github.com/user-attachments/assets/08e8f426-8110-4a6e-9a6e-8ada940eb04f" />
 
-For comparing the vertices, run `count_points.py`:
+For comparing the vertices, run `scripts/count_points.py`:
 
 ```
 python3 count_points.py
 ```
 
-For generating the border comparison visualizations, run `visualize_state.py`:
+For generating the border comparison visualizations, run `scripts/visualize_state.py`:
 
 ```
 python3 visualize_state.py
