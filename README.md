@@ -1,6 +1,6 @@
 # coord2state
 
-coord2state is a single-file JS library with no dependencies for quickly looking up which state a given latitude and longitude point is in. You can read my blog post about why I built this: [Mapping latitude and longitude to country, state, or city](http://austinhenley.com/latlong.html)
+coord2state is a single-file JS library with no dependencies for quickly looking up which state a given latitude and longitude point is in. You can read my blog post about why I built this: [Mapping latitude and longitude to country, state, or city](http://austinhenley.com/blog/coord2state.html)
 
 ## Installation
 
